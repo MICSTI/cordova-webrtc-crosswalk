@@ -1,0 +1,178 @@
+h1 {
+    text-align: center;
+}
+
+.title {
+    font-weight: bold;
+    margin-bottom: 0.5em;
+    font-size: 125%;
+    text-align: center;
+}
+
+#callStatus {
+    font-weight: bold;
+    margin-bottom: 0.5em;
+    font-size: 125%;
+}
+
+.button {
+    padding: 0.7em;
+    font-size: 110%;
+    text-align: center;
+    border-radius: 0.3em;
+    margin: 0.5em 0;
+}
+
+.button-main {
+    background-color: #52b3d9;
+}
+
+.button-secondary {
+    background-color: #f2f1ef;
+}
+
+.button-emerald {
+    background-color: #3fc380;
+}
+
+.highlight {
+    color: #f4b350;
+}
+
+.users, .messages {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.users li {
+    margin-bottom: 0.6em;
+    border-radius: 0.3em;
+    background-color: #f4b350;
+    padding: 0.8em;
+    
+    font-size: 110%;
+}
+
+#loginForm {
+    margin-top: 20%;
+}
+
+#username {
+    width: 99%;
+    font-size: 120%;
+    text-align: center;
+}
+
+#videoContainer {
+    display: none;
+}
+
+#localVideo, #remoteVideo {
+    display: none;
+}
+
+#localVideoContainer, #remoteVideoContainer {
+    display: none;
+}
+
+#localVideoCanvas {
+    z-index: 200;
+}
+
+#localDrawingCanvas {
+    position: absolute;
+    background: transparent;
+    z-index: 201;
+}
+
+#accept, #decline, #hangup {
+    display: none;
+}
+
+#messageContainer {
+    display: none;
+    
+    border-top: 1px solid #d2d7d3;
+    margin-top: 0.2em;
+    margin-bottom: 0.1em;
+    padding-top: 0.3em;
+}
+
+.message {
+    border-radius: 0.3em;
+    background-color: #f2f1ef;
+    padding: 0.5em;
+    margin-bottom: 0.4em;
+}
+
+.message-sender {
+    font-weight: bold;
+    margin-bottom: 0.3em;
+    color: #6c7a89;
+}
+
+.message-content {
+    font-size: 110%;
+}
+
+.sendMessage {
+    border-top: 1px solid #d2d7d3;
+    margin-top: 0.2em;
+    margin-bottom: 0.1em;
+    padding-top: 0.3em;
+}
+
+#sendMessageContent {
+    width: 95%;
+    padding: 0.4em;
+    font-size: 120%;
+    border-radius: 0.3em;
+    border: 1px solid #d2d7d3;
+}
+
+#batteryInfo {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 0.5em;
+}
+
+.battery-status-ok {
+    background-color: #00B16A;
+}
+
+.battery-status-low {
+    background-color: #EF4836;
+}
+
+.battery-status-critical {
+    background-color: #CF000F;
+}
+
+.user {
+    font-weight: bold;
+}
+
+.phoneNumber {
+    font-weight: normal;
+    font-size: 0.9em;
+    margin-top: 0.4em;
+}
+
+.phoneNumber a {
+    background-color: #d35400;
+    display: inline-block;
+    margin-left: 1em;
+    padding: 0.25em 0.4em;
+    border-radius: 0.25em;
+    text-decoration: none;
+    color: black;
+}
+
+.phoneNumber a img {
+    position: relative;
+    top: 0.1em;
+}

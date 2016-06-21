@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <meta http-equiv="Content-Security-Policy" content="default-src *; media-src blob:; style-src 'self' 'unsafe-inline'; script-src 'self' https://debug.monaca.mobi:8080 'unsafe-inline' 'unsafe-eval'; connect-src wss://webrtc-demo-micsti1.c9users.io https://debug.monaca.mobi:8080" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <title>WebRTC Crosswalk Demo</title>
+    </head>
+    <body>
+        <h1>WebRTC Crosswalk</h1>
+        
+        <section id="loginForm">
+            <div class="title">Please enter your name:</div>
+            <div><input type="text" id="username" /></div>
+            <div class="button button-main" id="login">Ok</div>
+        </section>
+		
+        <section id="userSelection">
+            <div class="title" id="availableUsers">Available users</div>
+		    <ul class="users"></ul>
+        </section>
+        
+        <section id="videoContainer">
+            <div id="callStatus"></div>
+            
+            <div id="localVideoContainer">
+                <video id="localVideo" autoplay></video>
+                <canvas id="localVideoCanvas"></canvas>
+                <canvas id="localDrawingCanvas"></canvas>
+            </div>
+            
+            <div id="remoteVideoContainer">
+                <video id="remoteVideo" autoplay></video>
+                <canvas id="remoteVideoCanvas"></canvas>
+                <canvas id="remoteDrawingCanvas"></canvas>
+            </div>
+
+            <div class="button button-main" id="accept">Accept</div>
+            <div class="button button-secondary" id="decline">Decline</div>
+            <div class="button button-main" id="hangup">Hangup</div>
+        </section>
+        
+        <section id="messageContainer">
+            <div class="title">Messages</div>
+            
+            <ul class="messages"></ul>
+            
+            <div class="sendMessage">
+                <input type="text" id="sendMessageContent" />
+                <div class="button button-emerald" id="sendMessageButton">Send message</div>
+            </div>
+        </section>
+        
+        <section id="batteryInfo">Battery is currently at <span id="batteryStatus"></span></section>
+		
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/jquery-2.2.0.min.js"></script>
+        <script type="text/javascript" src="js/adapter.js"></script>
+        <script type="text/javascript" src="js/webrtc.js"></script>
+        
+		<script type="text/javascript" src="js/model/Client.js"></script>
+		<script type="text/javascript" src="js/model/Message.js"></script>
+		<script type="text/javascript" src="js/model/Notification.js"></script>
+		<script type="text/javascript" src="js/model/User.js"></script>
+    </body>
+</html>
